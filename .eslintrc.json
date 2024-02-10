@@ -82,7 +82,7 @@
     "@stylistic/padded-blocks": "off",
     "@stylistic/quote-props": ["error", "as-needed"],
     "@stylistic/quotes": ["error", "double"],
-    "@stylistic/indent": ["error", 4],
+    "@stylistic/indent": ["error", 2],
     "@stylistic/semi": ["error", "never"],
     "@stylistic/space-before-function-paren": ["error", "never"],
     "@stylistic/spaced-comment": "off"
