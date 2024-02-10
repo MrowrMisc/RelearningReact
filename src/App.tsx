@@ -1,34 +1,25 @@
-import { useState } from "react"
-import Alert from "./components/Alert"
-import Button from "./components/Button"
-import ListGroup from "./components/ListGroup"
+/** @jsxImportSource @emotion/react */
+
+import { css, Global } from "@emotion/react"
+import Container from "./components/Container"
+
+const globalCss = css`
+  html, body, #root { height: 100%; margin: 0; }
+  body {
+    border: 1px solid #ff00ff;
+  }
+`
 
 function App() {
-  const dawgNames = ["Fido", "Rex", "Buddy", "Champ", "Spot"]
-
-  const [alertText, setAlertText] = useState("")
-  const [selectedDawg, setSelectedDawg] = useState("")
-
-  const onSelect = (itemName: string) => {
-    setSelectedDawg(itemName)
-  }
-
-  const onButtonClick = () => {
-    setAlertText(`The selected dawg is: ${selectedDawg}`)
-  }
-
-  const onAlertClose = () => {
-    setAlertText("")
-  }
-
   return (
-    <div>
-      <Alert type="success" onClose={onAlertClose} visible={alertText.trim() !== ""}>{alertText}</Alert>
-      <ListGroup items={dawgNames} heading="Dawgs" onSelectItem={onSelect} />
-      <Button type="danger" onClick={onButtonClick}>
-        Click me!
-      </Button>
-    </div>
+    <>
+      <Global styles={globalCss} />
+      <Container direction="column" align="center" justify="space-evenly">
+        <div css={{ border: "1px solid red" }}>Div 1</div>
+        <div css={{ border: "1px solid blue" }}>Div 2</div>
+        <div css={{ border: "1px solid green" }}>Div 3</div>
+      </Container>
+    </>
   )
 }
 
