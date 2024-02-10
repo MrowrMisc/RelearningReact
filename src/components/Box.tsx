@@ -1,13 +1,18 @@
-import React from "react"
+/** @jsxImportSource @emotion/react */
 
 type Props = {
-  children: React.ReactNode
+  children: React.ReactNode,
+  grow?: number,
 }
 
-function Box({ children }: Props) {
+function Box({ children, grow }: Props) {
   return (
-    <div>
-      <h1>Box</h1>
+    <div css={{
+      border: "4px solid blue",
+      flexGrow: grow || 0
+      // width: "100%",
+      // height: "100%"
+    }}>
       {children}    
     </div>
   )
