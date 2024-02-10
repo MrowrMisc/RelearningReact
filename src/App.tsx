@@ -23,8 +23,8 @@ function App() {
       <Global styles={globalCss} />
       <Container gap="10px">
         <Box><Item text="Item 1"></Item></Box>
-        <Box><Item text="Item 2"></Item></Box>
-        <Box grow={1}><Item text="Item 3"></Item></Box>
+        <Box flex="3"><Item text="Item 2"></Item></Box>
+        <Box flex="6"><Item text="Item 3"></Item></Box>
       </Container>
     </>
   )

@@ -16,12 +16,12 @@ function Container({ children, direction, justify, align, wrap, allowWrap, align
     width: "100%",
     height: "100%",
     display: "flex",
-    flexDirection: direction || "row",
-    justifyContent: justify || "flex-start",
+    flexDirection: direction || undefined,
+    justifyContent: justify || undefined,
     alignItems: align || "flex-start",
-    flexWrap: wrap || (allowWrap ? "wrap" : "nowrap"),
-    alignContent: alignContent || "flex-start",
-    gap: gap || "0"
+    flexWrap: wrap || (allowWrap === true ? "wrap" : (allowWrap === false ? "nowrap" : undefined)),
+    alignContent: alignContent || undefined,
+    gap: gap || undefined
   }
 
   return (
