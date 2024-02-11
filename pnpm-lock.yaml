@@ -14,12 +14,18 @@ dependencies:
   '@emotion/react':
     specifier: ^11.11.3
     version: 11.11.3(@types/react@18.2.55)(react@18.2.0)
+  '@tanstack/react-query':
+    specifier: ^5.20.1
+    version: 5.20.1(react@18.2.0)
   react:
     specifier: ^18.2.0
     version: 18.2.0
   react-dom:
     specifier: ^18.2.0
     version: 18.2.0(react@18.2.0)
+  wretch:
+    specifier: ^2.8.0
+    version: 2.8.0
 
 devDependencies:
   '@stylistic/eslint-plugin':
@@ -28,6 +34,9 @@ devDependencies:
   '@stylistic/eslint-plugin-ts':
     specifier: ^1.6.1
     version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)
+  '@tanstack/react-query-devtools':
+    specifier: ^5.20.1
+    version: 5.20.1(@tanstack/react-query@5.20.1)(react@18.2.0)
   '@types/react':
     specifier: ^18.2.55
     version: 18.2.55
@@ -925,6 +934,32 @@ packages:
       - supports-color
       - typescript
     dev: true
+
+  /@tanstack/query-core@5.20.1:
+    resolution: {integrity: sha512-OONHHYG5vzjob4An+EfzbW7TRyb+sCA0AEgHzUIMlV9NYlF7wIwbla3PUfB3ocnaK1gZyROf0Lux/CBSu0exBQ==}
+
+  /@tanstack/query-devtools@5.20.1:
+    resolution: {integrity: sha512-sSYo+GW7tx28M6FpcGqzo/zblbTEKrCG8THXOPoNy+EL1Z7kX4JXhRcihyKu3mY8MS/wsGghrZ/R0VTt6JXmBA==}
+    dev: true
+
+  /@tanstack/react-query-devtools@5.20.1(@tanstack/react-query@5.20.1)(react@18.2.0):
+    resolution: {integrity: sha512-VMjNjWLTu4+k0pGAhcsI8igtUI93ksrn4QDruaxbXdvLE3Yvfj8eaDVCemkmAySk7pCQJf4hhdByB/yOKSmIsg==}
+    peerDependencies:
+      '@tanstack/react-query': ^5.20.1
+      react: ^18.0.0
+    dependencies:
+      '@tanstack/query-devtools': 5.20.1
+      '@tanstack/react-query': 5.20.1(react@18.2.0)
+      react: 18.2.0
+    dev: true
+
+  /@tanstack/react-query@5.20.1(react@18.2.0):
+    resolution: {integrity: sha512-KRkOtJ47tv9B3EXfjHkbPkiFzOzYCOid8BrYBozk0rm9JpDB2xSf71q8w1PRudlQW6QUQIEDI9E6NIMh6AlLUw==}
+    peerDependencies:
+      react: ^18.0.0
+    dependencies:
+      '@tanstack/query-core': 5.20.1
+      react: 18.2.0
 
   /@types/babel__core@7.20.5:
     resolution: {integrity: sha512-qoQprZvz5wQFJwMDqeseRXWv3rqMvhgpbXFfVyWhbx9X47POIA6i/+dXefEmZKoAgOaTdaIgNSMqMIU61yRyzA==}
@@ -2359,7 +2394,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /lower-case@2.0.2:
     resolution: {integrity: sha512-7fm3l3NAF9WfN6W3JOmf5drwpVqX78JtoGJ3A6W0a6ZnldM41w2fV5D490psKFTpMds8TJse/eHLFFsNHHjHgg==}
@@ -2698,7 +2732,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
-    dev: false
 
   /regenerator-runtime@0.14.1:
     resolution: {integrity: sha512-dYnhHh0nJoMfnkZs6GmmhFknAGRrLznOu5nc9ML+EJxGvrx6H7teuevqVqCuPcPK//3eDrrjQhehXVx9cnkGdw==}
@@ -3152,6 +3185,11 @@ packages:
   /wrappy@1.0.2:
     resolution: {integrity: sha512-l4Sp/DRseor9wL6EvV2+TuQn63dMkPjZ/sp9XkghTEbV9KlPS1xUsZ3u7/IQO4wxtcFB4bgpQPRcR3QCvezPcQ==}
     dev: true
+
+  /wretch@2.8.0:
+    resolution: {integrity: sha512-MNYh+lukFfFgcmVpvxv0KsQt2LtAPvKFfLNcLGpCMiHTD3ndSoQ3/k5fGOCPI1J7CgN1mYAbp9mhPFFUGTzUeg==}
+    engines: {node: '>=14'}
+    dev: false
 
   /yallist@3.1.1:
     resolution: {integrity: sha512-a4UGQaWPH59mOXUYnAG2ewncQS4i4F43Tv3JoAM+s2VDAmS9NsK8GpDMLrCHPksFT7h3K6TOoUNn2pb7RoXx4g==}

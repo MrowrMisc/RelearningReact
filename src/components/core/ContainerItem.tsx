@@ -10,7 +10,7 @@ type Props = {
   order?: number
 }
 
-function Box({ children, grow, shrink, basis, flex, align, order }: Props) {
+function ContainerItem({ children, grow, shrink, basis, flex, align, order }: Props) {
   return (
     <div css={{
       border: "4px solid blue",
@@ -26,4 +26,4 @@ function Box({ children, grow, shrink, basis, flex, align, order }: Props) {
   )
 }
 
-export default Box
+export default ContainerItem

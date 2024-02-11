@@ -1,8 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
 import { css, Global } from "@emotion/react"
-import Container from "./components/Container"
-import Box from "./components/Box"
+import Container from "./components/core/Container"
+import ContainerItem from "./components/core/ContainerItem"
+import Something from "./components/Something"
 
 const globalCss = css`
   html, body, #root { height: 100%; margin: 0; }
@@ -22,9 +23,9 @@ function App() {
     <>
       <Global styles={globalCss} />
       <Container gap="10px">
-        <Box><Item text="Item 1"></Item></Box>
-        <Box flex="3"><Item text="Item 2"></Item></Box>
-        <Box flex="6"><Item text="Item 3"></Item></Box>
+        <ContainerItem><Item text="Item 1"></Item></ContainerItem>
+        <ContainerItem flex="3"><Something /></ContainerItem>
+        <ContainerItem flex="6"><Item text="Item 3"></Item></ContainerItem>
       </Container>
     </>
   )
